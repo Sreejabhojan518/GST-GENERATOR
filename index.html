@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/style.css">
+    <title>GST Invoice generator</title>
+</head>
+<body>
+    <div class="">
+        <header class="header">
+        <div class="">
+            <input class="uploadlogoin" value="Upload"><br><br>
+        </div>
+        <div class="logocontent">
+            <h4>Upload Logo</h4>
+            <p>240 x 240 pixels @ 72 DPI,
+                Maximum size of 1MB.</p>
+        </div>
+        <div class="">
+            <input value="TAX INVOICE" class="taxinvoice">
+        </div>
+        </header>
+
+        <div class="">
+        <div class="customerdetailsib">
+            <input type="text" value="Your Company" class="commonboxstyle"><br><br>
+            <input type="text" value="Your Name" class="commonboxstyle"><br><br>
+            <input type="text" value="Company's GSTIN" class="commonboxstyle"><br><br>
+            <input type="text" value="Company's Address" class="commonboxstyle"><br><br>
+            <input type="text" value="City" class="commonboxstyle"><br><br>
+            <input type="text" value="State" class="commonboxstyle"><br><br>
+            <input type="text" value="India" class="commonboxstyle"><br><br>
+        </div>
+        </div>
+
+        <div class="invoice-body">
+        <div class="customer-details">
+            <input type="text" value="Bill TO:" class="commonboxstyle">
+            <p id="customer-name"></p>
+            <p id="customer-address"></p>
+            <input type="text" value="Your Client'sCompany" class="commonboxstyle"><br><br>
+            <input type="text" value="Client's GSTIN" class="commonboxstyle"><br><br>
+            <input type="text" value="Client's Address" class="commonboxstyle"><br><br>
+            <input type="text" value="City" class="commonboxstyle"><br><br>
+            <input type="text" value="State" class="commonboxstyle"><br><br>
+            <input type="text" value="India" class="commonboxstyle"><br>
+            <div class="Placeofsupply">
+                <p>Place of suppply:</p>
+                <input type="text" value="State" class="Placeofsupplyinput"><br><br>
+            </div>
+        </div>
+
+
+        <div class="item-table">
+            <table>
+            <thead>
+                <tr class="row1">
+                <th>Item Description</th>
+                <th>Qty</th>
+                <th>Rate</th>
+                <th>SGST</th>
+                <th>CGST</th>
+                <th>Cess</th>
+                <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="row2">
+                <td><input type="text" name="item-1"></td>
+                <td><input type="number" name="description-1"></td>
+                <td><input type="number" name="quantity-1" value="1"></td>
+                <td><input type="number" name="price-1" value="0.00"></td>
+                <td><input type="number" name="price-1" value="0.00"></td>
+                <td><input type="number" name="price-1" value="0.00"></td>
+                <td><input type="number" name="price-1" value="0.00"></td>
+                <td><span id="amount-1"></span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="invoice-summary">
+            <p>Subtotal: <span id="sub-total"></span></p>
+            <p>GST (18%): <span id="gst-amount"></span></p>
+            <p>Total: <span id="total-amount"></span></p>
+        </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="/assets/script.js"></script>
+</html>

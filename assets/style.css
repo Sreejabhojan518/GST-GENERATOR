@@ -1,0 +1,38 @@
+body{
+    padding: 10px;
+}
+
+.logocontent{
+    margin-left: 40px;
+    width: 200px;
+}
+.logocontent p{
+    margin-bottom: 5px;
+    font-size: x-small;
+}
+.uploadlogoin{
+    width: 100px;
+    height: 80px;
+    text-align: center;
+}
+.taxinvoice{
+    width:250px;
+    height:40px;
+    font-size: 40px;
+    margin-left: 150px;
+    border: transparent;
+}
+.taxinvoice :hover{
+    border: transparent;
+}
+.header{
+    display:inline-flex;
+}
+
+.customerdetailsib{
+    margin-top: 20px;
+}
+.row2 td{
+    width: 50%;
+    height: auto;
+}
