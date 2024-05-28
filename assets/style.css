@@ -32,7 +32,34 @@ body{
 .customerdetailsib{
     margin-top: 20px;
 }
-.row2 td{
-    width: 50%;
-    height: auto;
+.row2{
+    width: 30%;
+}
+.threadheading{
+    width: fit-content;
+    background-color: black;
+}
+.row1{
+    background-color: transparent;
+}
+
+.textareabox1col1{
+    width: fit-content;
+}
+
+.idh{
+    width: 48%;
+}
+.qh{
+    width: 17%;
+}
+
+
+
+
+
+.div1{
+    background-color: black;
+    width: 100px;
+    height: 100px;
 }

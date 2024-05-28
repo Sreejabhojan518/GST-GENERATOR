@@ -54,31 +54,43 @@
 
         <div class="item-table">
             <table>
-            <thead>
+            <div class="threadheading">
                 <tr class="row1">
-                <th>Item Description</th>
-                <th>Qty</th>
-                <th>Rate</th>
-                <th>SGST</th>
-                <th>CGST</th>
-                <th>Cess</th>
-                <th>Amount</th>
+                <td class="idh"><input type="text" value="Item Description"></td>
+                <td class="qh"><input type="text" value="Qty"></td>
+                <td ><input type="text" value="Rate"></td>
+                <td ><input type="text" value="SGS"></td>
+                <td ><input type="text" value="CGST"></td>
+                <td ><input type="text" value="Cess"></td>
+                <td ><input type="text" value="Amount"></td>
                 </tr>
-            </thead>
-            <tbody>
-                <tr class="row2">
-                <td><input type="text" name="item-1"></td>
-                <td><input type="number" name="description-1"></td>
-                <td><input type="number" name="quantity-1" value="1"></td>
-                <td><input type="number" name="price-1" value="0.00"></td>
-                <td><input type="number" name="price-1" value="0.00"></td>
-                <td><input type="number" name="price-1" value="0.00"></td>
-                <td><input type="number" name="price-1" value="0.00"></td>
-                <td><span id="amount-1"></span></td>
+            </div>
+            <div class="row2" id="table1">
+                <tr>
+                    <td><textarea class="textareabox1col1" type="text" placeholder="Enter item name/description"></textarea>
+                        <input type="text" placeholder="HSN/SAC">
+                    </td>
+                    <td><input type="text" value="1" id="newqty"></td>
+                    <td><input type="number" value="0" id="">
+                        <input type="text" value="0.0">
+                    </td>
+                    <td><input type="number" value="0" id="newrate">
+                        <input type="text" value="0.0">
+                    </td>
+                    <td><input type="number" value="0" id="newsgs">
+                        <input type="text" value="0.0">
+                    </td>
+                    <td><input type="number" value="0" id="newcgst">
+                        <input type="text" value="0.0">
+                    </td>
+                    <td><input type="number" value="0.00"></td>
                 </tr>
-                </tbody>
+            </div>
             </table>
         </div>
+
+        <button id="button" onclick="tabelfun()">Create row</button>
+        <button onclick="">Delete row</button>
 
         <div class="invoice-summary">
             <p>Subtotal: <span id="sub-total"></span></p>
@@ -87,6 +99,34 @@
         </div>
         </div>
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div>
+        <input id="inputbox" onkeyup="upload()">
+        
+        <h1 id="result"></h1>
+        <button onclick="upload()" placeholder="jhon"
+    </div>
+
+
+    <div class="div1" ></div>
+    <button onclick="change()" id="box">change colour</button><br><br>
+
+
+    <button onclick="update()">Add</button>
+    
+    <h2 id="ello"></h2>
 </body>
 <script type="text/javascript" src="/assets/script.js"></script>
 </html>
