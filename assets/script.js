@@ -1,32 +1,8 @@
-var inpval = document.getElementById("inputbox")
-var resval = document.getElementById("result")
-
-var box = document.getElementById("box")
-
-
-var res = document.getElementById("ello")
-
-function upload(){
-    resval.textContent=inpval.value
-}
-
-
-function change(){
-    box.style.backgroundColor="red"
-}
-
-function update(){
-    var itmlis = document.createElement("h3")
-    itmlis.textContent="Hello"
-    res.append(itmlis)
-}
-
-
-function tabelfun(){
-    var newqty = document.getElementById("newqty").value;
-    var newrate = document.getElementById("newrate").value;
-    var newsgs = document.getElementById("newsgs").value;
-    var newcgst = document.getElementById("newcgst").value;
-    var tabellen=(tabel.rows.length)-1;
-    var row=tabel.insertRow(tabellen).outerHTML="<TR id='+tabellen'">
+function addnewrowdown(){
+    var newtable = document.getElementById("newtabledown")
+    var row = newtable.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = "NEW CELL1";
+    cell2.innerHTML = "NEW CELL2";
 }

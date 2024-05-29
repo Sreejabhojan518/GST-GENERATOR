@@ -3,130 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/style.css">
-    <title>GST Invoice generator</title>
+    <title>GST Generator</title>
 </head>
 <body>
-    <div class="">
-        <header class="header">
-        <div class="">
-            <input class="uploadlogoin" value="Upload"><br><br>
-        </div>
-        <div class="logocontent">
-            <h4>Upload Logo</h4>
-            <p>240 x 240 pixels @ 72 DPI,
-                Maximum size of 1MB.</p>
-        </div>
-        <div class="">
-            <input value="TAX INVOICE" class="taxinvoice">
-        </div>
-        </header>
-
-        <div class="">
-        <div class="customerdetailsib">
-            <input type="text" value="Your Company" class="commonboxstyle"><br><br>
-            <input type="text" value="Your Name" class="commonboxstyle"><br><br>
-            <input type="text" value="Company's GSTIN" class="commonboxstyle"><br><br>
-            <input type="text" value="Company's Address" class="commonboxstyle"><br><br>
-            <input type="text" value="City" class="commonboxstyle"><br><br>
-            <input type="text" value="State" class="commonboxstyle"><br><br>
-            <input type="text" value="India" class="commonboxstyle"><br><br>
-        </div>
-        </div>
-
-        <div class="invoice-body">
-        <div class="customer-details">
-            <input type="text" value="Bill TO:" class="commonboxstyle">
-            <p id="customer-name"></p>
-            <p id="customer-address"></p>
-            <input type="text" value="Your Client'sCompany" class="commonboxstyle"><br><br>
-            <input type="text" value="Client's GSTIN" class="commonboxstyle"><br><br>
-            <input type="text" value="Client's Address" class="commonboxstyle"><br><br>
-            <input type="text" value="City" class="commonboxstyle"><br><br>
-            <input type="text" value="State" class="commonboxstyle"><br><br>
-            <input type="text" value="India" class="commonboxstyle"><br>
-            <div class="Placeofsupply">
-                <p>Place of suppply:</p>
-                <input type="text" value="State" class="Placeofsupplyinput"><br><br>
-            </div>
-        </div>
-
-
-        <div class="item-table">
-            <table>
-            <div class="threadheading">
-                <tr class="row1">
-                <td class="idh"><input type="text" value="Item Description"></td>
-                <td class="qh"><input type="text" value="Qty"></td>
-                <td ><input type="text" value="Rate"></td>
-                <td ><input type="text" value="SGS"></td>
-                <td ><input type="text" value="CGST"></td>
-                <td ><input type="text" value="Cess"></td>
-                <td ><input type="text" value="Amount"></td>
-                </tr>
-            </div>
-            <div class="row2" id="table1">
-                <tr>
-                    <td><textarea class="textareabox1col1" type="text" placeholder="Enter item name/description"></textarea>
-                        <input type="text" placeholder="HSN/SAC">
-                    </td>
-                    <td><input type="text" value="1" id="newqty"></td>
-                    <td><input type="number" value="0" id="">
-                        <input type="text" value="0.0">
-                    </td>
-                    <td><input type="number" value="0" id="newrate">
-                        <input type="text" value="0.0">
-                    </td>
-                    <td><input type="number" value="0" id="newsgs">
-                        <input type="text" value="0.0">
-                    </td>
-                    <td><input type="number" value="0" id="newcgst">
-                        <input type="text" value="0.0">
-                    </td>
-                    <td><input type="number" value="0.00"></td>
-                </tr>
-            </div>
+    <table style="width:30%" id="newtabledown">
+        <tr>
+            <th>Item Description</th>
+            <th>Qty</th>
+            <th>Rate</th>
+            <th>SCG</th>
+            <th>CGST</th>
+            <th>Cess</th>
+            <th>Amount</th>
+        </tr>
+        <tr>
+            <td>
+                <textarea class="textareabox1col1" type="text" placeholder="Enter item name/description"></textarea><br>
+                <input type="text" placeholder="HSN/SAC" class="itemdescriptionheading">
+            </td>
+            <td>
+                <input type="text" value="1" class="qtyheading" >
+            </td>
+            <td>
+                <input type="number" value="0" id="" class="rateheading">
+                <input type="text" value="0.0" class="rateheading">
+            </td>
+            <td>
+                <input type="number" value="0" class="sgsheading">
+                <input type="text" value="0.0" class="sgsheading">
+            </td>
+            <td>
+                <input type="number" value="0" class="cgstheading">
+                <input type="text" value="0.0"  class="cgstheading">
+            </td>
+            <td>
+                <input type="number" value="0" class="cessheading">
+                <input type="text" value="0.0" class="cessheading">
+            </td>
+            <td>
+                <input type="number" value="0.00" class="amountheading">
+            </td>
             </table>
-        </div>
 
-        <button id="button" onclick="tabelfun()">Create row</button>
-        <button onclick="">Delete row</button>
+    <tr id="newrow">
+        <button type="button" onclick="addnewrowdown()"> Add Row </button>
+    </tr>
 
-        <div class="invoice-summary">
-            <p>Subtotal: <span id="sub-total"></span></p>
-            <p>GST (18%): <span id="gst-amount"></span></p>
-            <p>Total: <span id="total-amount"></span></p>
-        </div>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <div>
-        <input id="inputbox" onkeyup="upload()">
-        
-        <h1 id="result"></h1>
-        <button onclick="upload()" placeholder="jhon"
-    </div>
-
-
-    <div class="div1" ></div>
-    <button onclick="change()" id="box">change colour</button><br><br>
-
-
-    <button onclick="update()">Add</button>
     
-    <h2 id="ello"></h2>
+    
 </body>
-<script type="text/javascript" src="/assets/script.js"></script>
 </html>
